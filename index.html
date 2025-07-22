@@ -192,16 +192,27 @@ Reservoir storage data were retrieved from the U.S. Bureau of Reclamation for th
 <p>
 All datasets were imported into Colab using <code>pandas</code> and <code>geopandas</code>, cleaned with standard routines (e.g., <code>str.strip()</code>, <code>dropna()</code>, <code>merge()</code>), and structured into unified dataframes for downstream spatial and statistical operations. The cleaned dataframes supported calculations that will be described in the next section <b>Methodologies And Figures</b>.
 </p>
-
-
-
-
 </h5>
   </div>
 </div>
 
+<div class="w3-row-padding w3-padding-64 w3-container"><div class="w3-content"><h1 style="margin:auto; text-align: center;">Methodologies And Figures</h1><h5 class="w3-padding-32"><b>Linear Regression Modeling:</b><br><br>To assess directional trends over time, a linear regression model was applied to sequential data using the general form:<br><br>
+<code>y = β₀ + β₁ × x + ε</code><br><br>
+Where:
+<ul><li><b>y</b> is the dependent variable (e.g., population, reservoir volume)</li><li><b>x</b> is the independent variable (typically time, measured in years)</li><li><b>β₀</b> is the intercept, representing the baseline value when <code>x = 0</code></li><li><b>β₁</b> is the slope, indicating the average change in <code>y</code> per unit increase in <code>x</code></li><li><b>ε</b> is the residual error not explained by the model</li></ul>
+A positive <code>β₁</code> reflects upward trends, while a negative slope indicates decline. Model performance was evaluated using R² and p-values for <code>β₁</code>, providing insight into the strength and statistical significance of observed trends. Regression modeling was implemented using <code>statsmodels</code> within Google Colab to quantify long-term shifts in state-level data distributions.<br><br>
+For further background on regression techniques and trend analysis, see: <a href="https://crudata.uea.ac.uk/projects/stardex/Linear_regression.pdf"
+style="color: #003366; text-decoration: none; font-weight: bold;"
+title="Haylock, M. (2005). Linear Regression Analysis for STARDEX. Climatic Research Unit, University of East Anglia."> [13] </a>
+and
+<a href="https://link.springer.com/rwe/10.1007/978-3-319-57413-4_17"
+style="color: #003366; text-decoration: none; font-weight: bold;"
+title="SpringerLink. (2017). Regression Analysis. In: Quantitative Methods for Decision Makers."> [14] </a>.
+</h5></div></div>
+
+
 <div style="display: flex; justify-content: center;">
-  <iframe src="enso.html" style="width:80%; height:600px; border:none;"></iframe>
+  <iframe src="swe_regression.html" style="width:80%; height:600px; border:none;"></iframe>
 </div>
 
 <!-- Second Grid -->
@@ -253,4 +264,5 @@ function myFunction() {
 
 </body>
 </html>
+
 
