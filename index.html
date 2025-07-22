@@ -52,16 +52,16 @@ body {
      <h5 class="w3-padding-32">
   Colorado has experienced a sustained decline in water availability since 2002, marking the onset of persistent drought conditions
   <a href="https://doi.org/10.1029/2025GL115593"
-     style="text-decoration: none; font-weight: bold;"
+     style="color: #003366; text-decoration: none; font-weight: bold;"
      title="Abdelmohsen et al. (2025), Geophysical Research Letters. DOI: 10.1029/2025GL115593">
     [1]
-  </a>. During this period, streamflow, snow water equivalency (SWE), and reservoir storage have steadily decreased, reflecting systemic shifts in seasonal water input and hydrological balance across the state. To quantify these changes, we applied a suite of statistical and geospatial methodologies, including linear regression modeling, multi-harmonic curve fitting, and Pearson correlation analysis across county-level datasets. Temporal segmentation (1980–2001 vs. 2002–2024) was used to isolate structural shifts in SWE and streamflow behavior, while mean SWE comparisons and regression slope analysis revealed significant long-term declines. <br><br>
+  </a>. During this period, streamflow, snow water equivalency (SWE), and reservoir storage have steadily decreased, reflecting systemic shifts in seasonal water input and hydrological balance across the state. To quantify these changes, we applied a suite of statistical and geospatial methodologies, including linear regression modeling, multi-harmonic curve fitting, ANOVA analysis, and Pearson correlation analysis across county-level datasets. Temporal segmentation (1980–2001 vs. 2002–2024) was used to isolate structural shifts in SWE and streamflow behavior, while mean SWE comparisons and regression slope analysis revealed significant long-term declines. <br><br>
 
   Agricultural water use has dropped significantly, driven by reduced streamflows, declining snowpack, and the loss of over one million acres of irrigated farmland. In contrast, residential water use has remained relatively stable, maintaining consistent demand despite population growth. Both surface water and groundwater withdrawals have declined, primarily within the agricultural sector, as supply limitations and conservation measures reshape usage patterns. Spatiotemporal mapping techniques—including interactive choropleths and multi-layered dashboards—were used to visualize SWE, streamflow, and land use changes across Colorado counties, integrating hydrologic, demographic, and agricultural datasets. <br><br>
 
   Broader indicators of climate change—including altered precipitation timing and reduced snowpack accumulation—correlate with the decline in SWE, underscoring climatic disruption as a key driver. These findings are consistent with recent satellite analyses and hydrologic modeling studies that document terrestrial water storage losses across the Colorado River Basin
   <a href="https://doi.org/10.1029/2025GL115593"
-     style="text-decoration: none; font-weight: bold;"
+     style="color: #003366; text-decoration: none; font-weight: bold;"
      title="Abdelmohsen et al. (2025), Geophysical Research Letters. DOI: 10.1029/2025GL115593">
     [1]
   </a>. The compounded impacts of climate variability, expanding population, and shifting land use patterns have led to a measurable decrease in streamflow and overall water availability. These results underscore the urgent need for adaptive water management strategies, integrated resource planning, and resilient infrastructure to confront escalating hydrological challenges across Colorado.
@@ -78,12 +78,12 @@ body {
       <h5 class="w3-padding-32">
   Colorado’s hydrological profile has shifted dramatically over the past two decades, reshaping water resource dynamics across agricultural, municipal, and ecological domains
   <a href="https://doi.org/10.1016/j.ejrh.2025.102554"
-     style="text-decoration: none; font-weight: bold;"
+     style="color: #003366; text-decoration: none; font-weight: bold;"
      title="Tillman et al. (2025), Journal of Hydrology: Regional Studies. DOI: 10.1016/j.ejrh.2025.102554">
     [2]
   </a>. While the state’s population continues to expand—particularly along the urbanized Front Range—the availability and distribution of freshwater inputs have followed a downward trajectory. Declines in streamflow, reservoir levels, snow water equivalency (SWE), and total withdrawals of surface and groundwater have disrupted long-standing patterns of consumption and supply. <br><br>
 
-  These systemic changes reflect the convergence of climatic volatility, land use transformation, and constrained water infrastructure. Agricultural systems have undergone especially sharp contractions in water use, driven by reduced access to surface flows and the retirement of irrigated lands. Meanwhile, residential demand has remained steady, placing mounting strain on existing water networks even as conservation efforts have stabilized household consumption. Amid these pressures, Colorado’s water systems face an inflection point—one that demands coordinated monitoring, strategic adaptation, and long-range planning. This study integrates publicly available datasets to trace hydrological trends across sectors, identify the underlying climatic and socio-demographic drivers, and clarify the implications for statewide resource management. <br><br>
+  These systemic changes reflect the convergence of climatic volatility, land use transformation, and constrained water infrastructure. Agricultural systems have undergone especially sharp contractions in water use, driven by reduced access to surface flows and the retirement of irrigated lands. Meanwhile, residential demand has remained steady, placing mounting strain on existing water networks even as conservation efforts have stabilized household consumption. <br><br>
 
   Amid these pressures, Colorado’s water systems face an inflection point—one that demands coordinated monitoring, strategic adaptation, and long-range planning. This study integrates publicly available datasets to trace hydrological trends across sectors, identify the underlying climatic and socio-demographic drivers, and clarify the implications for statewide resource management.
 </h5>
@@ -92,10 +92,117 @@ body {
   </div>
 </div>
 
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+      <h1 style ="margin:auto; text-align: center;">Data</h1>
+      <h5 class="w3-padding-32">
+  <b>Snow Water Equivalency (SWE):</b><br><br>
+Colorado’s mountain snowpack has declined and become more variable over the past two decades, impacting water supply across agricultural, municipal, and ecological sectors
+<a href="https://sustainability.colostate.edu/humannature/changing-snowpack-is-altering-colorados-environment/"  
+style="color: #003366; text-decoration: none; font-weight: bold;"  
+title="Colorado State University Sustainability Institute. (2024). A Warmer Spring: How a Changing Snowpack is Altering Colorado’s Environment.">
+[3]
+</a>. SWE data were obtained from the Natural Resources Conservation Service’s NWCC Report Generator
+<a href="https://wcc.sc.egov.usda.gov/reportGenerator/"  
+style="color: #003366;text-decoration: none; font-weight: bold;"  
+title="Natural Resources Conservation Service. (n.d.). Report Generator 2.0: NWCC Report Generator. U.S. Department of Agriculture.">
+[4]
+</a>, which provides monthly mean values from SNOTEL stations across the state. These metrics enable comparison of pre- and post-2000 conditions, offering insight into shifting snowmelt timing and volume.
+ <br><br>
+ <b>Water Discharge (ft³/s):</b><br><br>
+Streamflow patterns across Colorado have shifted notably over the past two decades, reflecting broader hydrologic changes tied to climate variability and land use. Discharge data were obtained from the U.S. Geological Survey’s Water Data for the Nation portal
+<a href="https://waterdata.usgs.gov/nwis"  
+style="color: #003366;text-decoration: none; font-weight: bold;"  
+title="U.S. Geological Survey. (n.d.). Water data for the nation.">
+[5]
+</a>, which provides real-time and historical flow rates in cubic feet per second (ft³/s) from thousands of streamgages statewide. Monthly mean discharge values were extracted by selecting relevant station IDs, specifying the parameter code for streamflow (00060), and aggregating data across water years to compare pre- and post-2000 conditions.
+ <br><br>
+<b>Agricultural Irrigation and Water Withdrawals:</b>  
+<p>
+Irrigated land records from the <i>Census of Agriculture</i> were used as proxies for agricultural consumptive use across Colorado. Two key county-level attributes were selected for each five-year census between 1982 and 2022:
+</p>
+<ul>
+  <li>Total land held by farms with irrigation systems</li>
+  <li>Actual land irrigated</li>
+</ul>
+<p>
+These metrics were chosen for their methodological consistency throughout the study period. Historical tables were accessed via  
+<a href="https://agcensus.library.cornell.edu/"  
+   style="color: #003366; text-decoration: none; font-weight: bold;"  
+   title="Cornell’s Ag Census Library">  
+  [6]
+</a>  
+and more recent data from  
+<a href="https://www.nass.usda.gov/AgCensus/index.php"  
+   style="color: #003366; text-decoration: none; font-weight: bold;"  
+   title="USDA Census of Agriculture Portal">  
+  [7]
+</a>.
+</p>
+
+<p>
+Water withdrawal data were compiled from the U.S. Geological Survey’s Colorado water use portal  
+<a href="https://waterdata.usgs.gov/co/nwis/wu"  
+   style="color: #003366; text-decoration: none; font-weight: bold;"  
+   title="USGS Water Use Data for Colorado">  
+  [8]
+</a>  
+and the national portal  
+<a href="https://waterdata.usgs.gov/nwis/wu"  
+   style="color: #003366; text-decoration: none; font-weight: bold;"  
+   title="USGS Water Use Data for the Nation">  
+  [9]
+</a>. Attributes spanning 1985–2015 were curated into state and county-level dataframes and include:
+</p>
+<ul>
+  <li>Total population (<code>PopTotalK</code>)</li>
+  <li>Groundwater withdrawals by category: public supply, domestic, industrial, thermoelectric, mining, livestock, irrigation</li>
+  <li>Surface-water withdrawals by matching categories</li>
+  <li>Summary metrics: <i>Total_All_Water_Use</i>, <i>Total_Groundwater_Use</i>, <i>Total_Surfacewater_Use</i></li>
+</ul>
+<p>
+County identifiers (<code>county_nm</code>) were present in archival records prior to 2012.
+</p>
+
+<b>Population and Reservoir Data:</b>  
+<p>
+County-level boundaries were sourced from the Colorado Department of Public Health and Environment  
+<a href="https://data-cdphe.opendata.arcgis.com/datasets/CDPHE::colorado-county-boundaries/explore?location=38.061821%2C-105.275669%2C7.05"  
+   style="color: #003366; text-decoration: none; font-weight: bold;"  
+   title="CDPHE County Boundary Shapefiles">  
+  [10]
+</a>  
+and loaded into the Google Colab environment via Google Drive. Population data spanning 1985–2022 were downloaded as CSV from the Colorado Department of Local Affairs  
+<a href="https://demography.dola.colorado.gov/assets/html/county.html"  
+   style="color: #003366; text-decoration: none; font-weight: bold;"  
+   title="State Demography Office County Data Resource Page">  
+  [11]
+</a>. After cleaning, columns were trimmed and aligned for consistency, and both datasets were merged on county names.
+</p>
+
+<p>
+Reservoir storage data were retrieved from the U.S. Bureau of Reclamation for the Upper Colorado Basin  
+<a href="https://www.usbr.gov/uc/"  
+   style="color: #003366; text-decoration: none; font-weight: bold;"  
+   title="Upper Colorado Basin – Bureau of Reclamation">  
+  [12]
+</a>. Records included average statewide reservoir volume in acre-feet across water years. These were grouped by time period to facilitate comparison between early (1985–2001) and recent (2002–2022) storage trends.
+</p>
+<b>All Data Sets:</b>
+<p>
+All datasets were imported into Colab using <code>pandas</code> and <code>geopandas</code>, cleaned with standard routines (e.g., <code>str.strip()</code>, <code>dropna()</code>, <code>merge()</code>), and structured into unified dataframes for downstream spatial and statistical operations. The cleaned dataframes supported calculations that will be described in the next section <b>Methodologies And Figures</b>.
+</p>
+
+
+
+
+</h5>
+  </div>
+</div>
+
 <div style="display: flex; justify-content: center;">
   <iframe src="enso.html" style="width:80%; height:600px; border:none;"></iframe>
 </div>
-
 
 <!-- Second Grid -->
 <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
@@ -146,3 +253,4 @@ function myFunction() {
 
 </body>
 </html>
+
