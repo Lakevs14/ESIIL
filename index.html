@@ -109,7 +109,7 @@ title="Natural Resources Conservation Service. (n.d.). Report Generator 2.0: NWC
 [4]
 </a>, which provides monthly mean values from SNOTEL stations across the state. These metrics enable comparison of pre- and post-2000 conditions, offering insight into shifting snowmelt timing and volume.
  <br><br>
- <b>Water Discharge (ft³/s):</b><br><br>
+ <b>Water Discharge Cubic Feet Per Second (cf3):</b><br><br>
 Streamflow patterns across Colorado have shifted notably over the past two decades, reflecting broader hydrologic changes tied to climate variability and land use. Discharge data were obtained from the U.S. Geological Survey’s Water Data for the Nation portal
 <a href="https://waterdata.usgs.gov/nwis"  
 style="color: #003366;text-decoration: none; font-weight: bold;"  
@@ -196,7 +196,7 @@ All datasets were imported into Colab using <code>pandas</code> and <code>geopan
   </div>
 </div>
 
-<div class="w3-row-padding w3-padding-64 w3-container"><div class="w3-content"><h1 style="margin:auto; text-align: center;">Methodologies And Figures With Maps</h1><h5 class="w3-padding-32"><b>Linear Regression Modeling:</b><br><br>To assess directional trends over time, a linear regression model was applied to sequential data using the general form:<br><br>
+<div class="w3-row-padding w3-padding-64 w3-container"><div class="w3-content"><h1 style="margin:auto; text-align: center;">Methodologies And Figures With Maps (State-Wide Analysis)</h1><h5 class="w3-padding-32"><b>Linear Regression Modeling:</b><br><br>To assess directional trends over time, a linear regression model was applied to sequential data using the general form:<br><br>
 <code>y = β₀ + β₁ × x + ε</code><br><br>
 Where:
 <ul><li><b>y</b> is the dependent variable (e.g., population, reservoir volume)</li><li><b>x</b> is the independent variable (typically time, measured in years)</li><li><b>β₀</b> is the intercept, representing the baseline value when <code>x = 0</code></li><li><b>β₁</b> is the slope, indicating the average change in <code>y</code> per unit increase in <code>x</code></li><li><b>ε</b> is the residual error not explained by the model</li></ul>
@@ -223,7 +223,7 @@ title="SpringerLink. (2017). Regression Analysis. In: Quantitative Methods for D
 <blockquote style="margin-top: 20px; padding: 16px; background-color: #f9f9f9; border-left: 4px solid #003366; font-size: 0.9em;"><b>Figure Interpretation:</b><br><br>This comparative map visualizes Snow Water Equivalent (SWE) conditions across Colorado for two time periods: 1980–2001 and 2002–2024. Point-based measurements from SNOTEL stations were transformed into polygon surfaces using Thiessen (Voronoi) tessellation. This spatial interpolation assigns each station’s SWE value to the surrounding region that is closest to it, creating contiguous polygons ideal for visual comparison.<br><br>SWE values are color-coded from light yellow to dark green, with lighter shades representing lower SWE and darker tones indicating higher accumulation. The 2002–2024 map exhibits a noticeable shift toward lighter shades statewide, suggesting a broad decline in seasonal snowpack depth during the more recent years. This reinforces observed regression trends and highlights regional variability in snowmelt contributions to Colorado’s water supply.</blockquote>
 
 <div style="display: flex; justify-content: center; flex-direction: column; align-items: center;">
-  <h5 style="font-weight: bold; text-align: center;">Streamflow Regression Plot</h5>
+  <h5 style="font-weight: bold; text-align: center;">Streamflow Regression Plot (cf3)</h5>
   <iframe src="discharge_regression.html" style="width:80%; height:900px; border:none;"></iframe>
 </div>
 
@@ -307,7 +307,7 @@ Trend Slopes:</b> Farmland –0.286M acres/year, Irrigated –0.034M acres/year
 
 <blockquote style="margin-top: 20px; padding: 16px; background-color: #f9f9f9; border-left: 4px solid #003366; font-size: 0.9em;">
   <b>Figure Interpretation:</b><br><br>
-  This choropleth map illustrates county-level changes across Colorado from 1985–2001 to 2002–2024. Visualized layers include Total Population, Irrigated Agriculture, Streamflow Discharge, and Snow Water Equivalent (SWE), each shaded using a seven-class color ramp.
+  These choropleth maps illustrates county-level and station level changes across Colorado from pre and post 2000 time periods. Visualized layers include Total Population, Irrigated Agriculture, Streamflow Discharge, and Snow Water Equivalent (SWE), each shaded using a seven-class color ramp.
   <br><br>
   Streamflow and irrigated acreage show widespread declines, consistent with diminished snowpack and hydrologic stress <a href="https://cwcb.colorado.gov/"> [18] </a> <a href="https://data.nass.usda.gov/Publications/AgCensus/2022/Full_Report/Volume_1,_Chapter_1_State_Level/Colorado/"> [19] </a>. SWE trends are predominantly negative, while population growth is concentrated in urban counties <a href="https://demography.dola.colorado.gov/population/"> [20] </a>.
   <br><br>
@@ -340,6 +340,33 @@ Trend Slopes:</b> Farmland –0.286M acres/year, Irrigated –0.034M acres/year
     </h5>
   </div>
 </div>
+<h5 style="font-weight: bold; text-align: center;">SWE Harmonic Plot</h5>
+<div style="display: flex; justify-content: center;">
+  <iframe src="swe_harmonic.html" style="width:80%; height:900px; border:none;"></iframe>
+</div>
+<blockquote style="margin-top: 20px; padding: 16px; background-color: #f9f9f9; border-left: 4px solid #003366; font-size: 0.9em;">
+  <b>Figure Interpretation:</b><br><br>
+  This harmonic decomposition illustrates evolving seasonal dynamics in Colorado’s Snow Water Equivalent (SWE) between the early (1980–2001) and recent (2002–2024) climate blocks. First-order harmonics—representing dominant annual cycles—show a discernible reduction in amplitude post-2001, with seasonal SWE peaks becoming less pronounced and phase-shifted later into spring. Higher-order harmonics, indicative of intra-seasonal variability, also exhibit attenuation, suggesting dampened fluctuations within the snow accumulation and melt period.<br><br>
+  Mean SWE declined from 6.04 inches (1980–2001) to 5.33 inches (2002–2024), reflecting an 11.8% drop in average snowpack depth across modeled counties. These harmonic differences point to less reliable seasonal accumulation and more erratic melt timing—complications that undermine forecasting accuracy for reservoir recharge and runoff-driven allocations.<br><br>
+  Together, the amplitude and phase shifts captured in these plots affirm structural changes in Colorado’s snowpack rhythm, consistent with warming trends and altered moisture delivery patterns across decades 
+  <a href="https://www.epa.gov/climate-indicators/climate-change-indicators-snowpack"
+     style="color: #003366; text-decoration: none; font-weight: bold;"
+     title="U.S. Environmental Protection Agency (2024). Climate Change Indicators: Snowpack."> [22] </a>.
+</blockquote>
+<h5 style="font-weight: bold; text-align: center;">Discharge Harmonic Plot</h5>
+<div style="display: flex; justify-content: center;">
+  <iframe src="discharge_harmonic.html" style="width:80%; height:900px; border:none;"></iframe>
+</div>
+<blockquote style="margin-top: 20px; padding: 16px; background-color: #f9f9f9; border-left: 4px solid #003366; font-size: 0.9em;">
+  <b>Figure Interpretation:</b><br><br>
+  This harmonic decomposition of stream discharge reveals seasonal shifts that closely mirror those observed in SWE patterns. Given the strong positive correlation (~0.8) between SWE and discharge across Colorado’s mountain-fed basins, the attenuation of harmonic amplitudes post-2001 reflects a synchronized decline in both snowpack accumulation and spring runoff volumes.<br><br>
+  First-order harmonics—representing annual discharge cycles—show reduced amplitude and delayed phase timing in the 2002–2024 block, consistent with later snowmelt onset and diminished peak flows. Higher-order harmonics also weaken, indicating less intra-seasonal variability and a smoothing of runoff pulses. These changes parallel SWE trends, where mean values dropped from 6.04 inches to 5.33 inches over the same periods, reinforcing the hydrologic coupling between snowpack and discharge.<br><br>
+  The harmonic alignment between SWE and discharge underscores the sensitivity of Colorado’s water systems to climatic shifts. Reduced snowpack amplitude and altered melt timing directly translate to lower and less predictable streamflow, complicating reservoir operations, ecological flow targets, and water rights forecasting 
+  <a href="https://pubs.usgs.gov/wsp/1543/report.pdf"
+     style="color: #003366; text-decoration: none; font-weight: bold;"
+     title="Helsel, D.R. & Hirsch, R.M. (2002). Statistical Methods in Water Resources, USGS WSP-1543."> [23] </a>.
+</blockquote>
+
 
 <!-- Second Grid -->
 <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
