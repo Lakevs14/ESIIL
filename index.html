@@ -234,7 +234,7 @@ title="SpringerLink. (2017). Regression Analysis. In: Quantitative Methods for D
   A comparison of the time blocks shows mean discharge falling from 931.1 cfs (1980–2001) to 732.0 cfs (2002–2024), reflecting a 21.4% drop. These findings illustrate weakening surface water availability, with implications for reservoir operations, water allocation planning, and ecosystem resilience amid evolving climate conditions.
 </blockquote>
 
-<h5 style="font-weight: bold; text-align: center;">Streamflow Comparison Map Cubic Feet Per Second (cfs)</h5>
+<h5 style="font-weight: bold; text-align: center;">Streamflow Comparison Map</h5>
 <div style="display: flex; justify-content: center;">
   <iframe src="annual_discharge_comparison.html" style="width:60%; height:900px; border:none;"></iframe>
 </div>
@@ -314,39 +314,41 @@ Trend Slopes:</b> Farmland –0.286M acres/year, Irrigated –0.034M acres/year
   These spatial shifts reflect evolving pressures on Colorado’s water and land systems and provide a foundation for integrated analysis and planning across sectors.
 </blockquote>
 
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+    <h5 class="w3-padding-32">
+      <b>Harmonic Signal Decomposition:</b><br><br>
+      To quantify periodicity in hydrologic and climatological data, harmonic analysis was applied using the truncated Fourier series form:<br><br>
+      <code>y(t) = a₀ + Σ [aₙ cos(nωt) + bₙ sin(nωt)]</code><br><br>
+      Where:
+      <ul>
+        <li><b>y(t)</b> is the time series (e.g., SWE, streamflow)</li>
+        <li><b>n</b> is the harmonic component number</li>
+        <li><b>ω</b> is the fundamental angular frequency</li>
+        <li><b>a₀</b> is the mean value over the cycle</li>
+        <li><b>aₙ</b> and <b>bₙ</b> represent amplitudes of cosine and sine components</li>
+      </ul>
+      Harmonic plots were built using <code>numpy.fft</code> and <code>scipy.signal</code> routines in Google Colab. These decompositions revealed shifts in seasonal amplitude, phase timing, and dominant frequencies associated with snowmelt and runoff variability. Peaks in the first harmonic represent annual cycles, while attenuation in higher-order harmonics reflects reduced intra-seasonal variability.<br><br>
+      For further background on harmonic filtering in geophysical series, see: 
+      <a href="https://pubs.usgs.gov/wsp/1543/report.pdf"
+         style="color: #003366; text-decoration: none; font-weight: bold;"
+         title="Helsel, D.R. & Hirsch, R.M. (2002). Statistical Methods in Water Resources, USGS WSP-1543."> [20] </a>
+      and 
+      <a href="https://doi.org/10.1007/s10584-010-9878-5"
+         style="color: #003366; text-decoration: none; font-weight: bold;"
+         title="Robeson, S.M. (2010). Frequency changes in climate time series. Climatic Change 102(3–4): 425–438."> [21] </a>.
+    </h5>
+  </div>
+</div>
+
 <!-- Second Grid -->
 <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
   <div class="w3-content">
     <div class="w3-third w3-center">
-      <i class="fa fa-coffee w3-padding-64 w3-text-red w3-margin-right"></i>
     </div>
-
-    <div class="w3-twothird">
-      <h1>Lorem Ipsum</h1>
-      <h5 class="w3-padding-32">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h5>
-
-      <p class="w3-text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-        laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
-  </div>
-</div>
-
-<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
-    <h1 class="w3-margin w3-xlarge">Quote of the day: live life</h1>
-</div>
-
+   
 <!-- Footer -->
 <footer class="w3-container w3-padding-64 w3-center w3-opacity">  
-  <div class="w3-xlarge w3-padding-32">
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-snapchat w3-hover-opacity"></i>
-    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
- </div>
- <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
 </footer>
 
 <script>
