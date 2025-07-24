@@ -221,7 +221,7 @@ title="SpringerLink. (2017). Regression Analysis. In: Quantitative Methods for D
 
 <div style="display: flex; justify-content: center;"><iframe src="comparison.html" style="width:60%; height:900px; border:none;"></iframe></div>
 <blockquote style="margin-top: 20px; padding: 16px; background-color: #f9f9f9; border-left: 4px solid #003366; font-size: 0.9em; width: 80%; margin-left: auto; margin-right: auto;"><b>Figure Interpretation:</b><br><br>This comparative map visualizes Snow Water Equivalent (SWE) conditions across Colorado for two time periods: 1980–2001 and 2002–2024. Point-based measurements from SNOTEL stations were transformed into polygon surfaces using Thiessen (Voronoi) tessellation. This spatial interpolation assigns each station’s SWE value to the surrounding region that is closest to it, creating contiguous polygons ideal for visual comparison.<br><br>SWE values are color-coded from light yellow to dark green, with lighter shades representing lower SWE and darker tones indicating higher accumulation. The 2002–2024 map exhibits a noticeable shift toward lighter shades statewide, suggesting a broad decline in seasonal snowpack depth during the more recent years. This reinforces observed regression trends and highlights regional variability in snowmelt contributions to Colorado’s water supply.</blockquote>
-
+<br>
 <div style="display: flex; justify-content: center; flex-direction: column; align-items: center;">
   <h5 style="font-weight: bold; text-align: center;">Streamflow Regression Plot (cf3)</h5>
   <iframe src="discharge_regression.html" style="width:80%; height:900px; border:none;"></iframe>
@@ -233,7 +233,7 @@ title="SpringerLink. (2017). Regression Analysis. In: Quantitative Methods for D
   <br><br>
   A comparison of the time blocks shows mean discharge falling from 931.1 cfs (1980–2001) to 732.0 cfs (2002–2024), reflecting a 21.4% drop. These findings illustrate weakening surface water availability, with implications for reservoir operations, water allocation planning, and ecosystem resilience amid evolving climate conditions.
 </blockquote>
-
+<br>
 <h5 style="font-weight: bold; text-align: center;">Streamflow Comparison Map</h5>
 <div style="display: flex; justify-content: center;">
   <iframe src="annual_discharge_comparison.html" style="width:60%; height:900px; border:none;"></iframe>
@@ -244,6 +244,7 @@ title="SpringerLink. (2017). Regression Analysis. In: Quantitative Methods for D
   This visual compares annual streamflow data across Colorado between 1980–2001 and 2002–2024 using scaled point symbology. Each point represents a streamgage station, sized proportionally to its average discharge and color-coded from light yellow to dark green—where lighter tones indicate lower flow rates and darker tones reflect higher values.<br><br>
   The earlier time frame (1980–2001) exhibits a more widespread presence of larger, dark-green points, denoting robust streamflow across much of the state. In contrast, the 2002–2024 map displays noticeably smaller and lighter-colored points, indicating a decline in discharge magnitudes across numerous basins. This pattern reinforces trends observed through regression analyses and highlights reduced surface water availability during the more recent period, which may impact municipal supply, agriculture, and aquatic ecosystems.
 </blockquote>
+<br>
 <div style="display: flex; justify-content: center; flex-direction: column; align-items: center; width: 80%; margin-left: auto; margin-right: auto;">
   <h5 style="font-weight: bold; text-align: center;">Irrigated Acres Regression Plot</h5>
   <iframe src="interactive_irrigated_acres_plot.html" style="width:80%; height:900px; border:none;"></iframe>
@@ -265,6 +266,7 @@ Trend Slopes:</b> Farmland –0.286M acres/year, Irrigated –0.034M acres/year
    style="color: #003366; text-decoration: none; font-weight: bold;"
    title="Colorado Encyclopedia. (2023). Irrigation in Colorado."> [15] </a>
 </blockquote>
+<br>
 <h5 style="font-weight: bold; text-align: center;">Colorado Agriculture Map</h5>
 <div style="display: flex; justify-content: center;">
   <iframe src="colorado_agriculture_map.html" style="width:60%; height:900px; border:none;"></iframe>
@@ -281,6 +283,7 @@ Trend Slopes:</b> Farmland –0.286M acres/year, Irrigated –0.034M acres/year
      style="color: #003366; text-decoration: none; font-weight: bold;"
      title="USDA Census of Agriculture. (2022). Colorado State-Level Data."> [16] </a>
 </blockquote>
+<br>
 <div style="display: flex; justify-content: center; flex-direction: column; align-items: center;">
   <h5 style="font-weight: bold; text-align: center;">Colorado Population Regression Plot</h5>
   <iframe src="colorado_population_linear_regression.html" style="width:80%; height:900px; border:none;"></iframe>
@@ -300,6 +303,7 @@ Trend Slopes:</b> Farmland –0.286M acres/year, Irrigated –0.034M acres/year
      style="color: #003366; text-decoration: none; font-weight: bold;" 
      title="Colorado State Demography Office. (2024). Colorado Population Trends and Forecasts."> [17] </a>
 </blockquote>
+<br>
 <div style="display: flex; justify-content: center; flex-direction: column; align-items: center;">
   <h5 style="font-weight: bold; text-align: center;">Colorado Population, SWE, Discharge, and Irrigation Change Map</h5>
   <iframe src="final_map.html" style="width:60%; height:900px; border:none;"></iframe>
@@ -313,10 +317,11 @@ Trend Slopes:</b> Farmland –0.286M acres/year, Irrigated –0.034M acres/year
   <br><br>
   These spatial shifts reflect evolving pressures on Colorado’s water and land systems and provide a foundation for integrated analysis and planning across sectors.
 </blockquote>
-
+<br>
 <div class="w3-row-padding w3-padding-64 w3-container">
   <div class="w3-content">
     <h5 class="w3-padding-32">
+    <div class="w3-row-padding w3-padding-64 w3-container"><div class="w3-content"><h1 style="margin:auto; text-align: center;">Further Hydrologic Analysis (State-Wide Analysis)</h1><br><br>
       <b>Harmonic Signal Decomposition:</b><br><br>
       To quantify periodicity in hydrologic and climatological data, harmonic analysis was applied using the truncated Fourier series form:<br><br>
       <code>y(t) = a₀ + Σ [aₙ cos(nωt) + bₙ sin(nωt)]</code><br><br>
@@ -353,6 +358,7 @@ Trend Slopes:</b> Farmland –0.286M acres/year, Irrigated –0.034M acres/year
      style="color: #003366; text-decoration: none; font-weight: bold;"
      title="U.S. Environmental Protection Agency (2024). Climate Change Indicators: Snowpack."> [22] </a>.
 </blockquote>
+<br>
 <h5 style="font-weight: bold; text-align: center;">Discharge Harmonic Plot</h5>
 <div style="display: flex; justify-content: center;">
   <iframe src="discharge_harmonic.html" style="width:80%; height:900px; border:none;"></iframe>
@@ -366,7 +372,35 @@ Trend Slopes:</b> Farmland –0.286M acres/year, Irrigated –0.034M acres/year
      style="color: #003366; text-decoration: none; font-weight: bold;"
      title="Helsel, D.R. & Hirsch, R.M. (2002). Statistical Methods in Water Resources, USGS WSP-1543."> [23] </a>.
 </blockquote>
-
+<br>
+<h3 style="font-weight: bold; text-align: center;">Additional Hydrologic Plots</h3>
+<br>
+<h5 style="font-weight: bold; text-align: center;">Colorado Water Use Trends Plot</h5>
+<div style="display: flex; justify-content: center;">
+  <iframe src="water_uses_colorado.html" style="width:80%; height:900px; border:none;"></iframe>
+</div>
+<blockquote style="margin-top: 20px; padding: 16px; background-color: #f9f9f9; border-left: 4px solid #003366; font-size: 0.9em; width: 80%; margin-left: auto; margin-right: auto;">
+  <b>Figure Interpretation:</b><br><br>
+  This plot illustrates water use trends across Colorado from 1985 to 2015, segmented by sector. Agriculture (self-supplied) shows a consistent decline, while public supply rose sharply until 2000 and then stabilized. Thermoelectric and industrial uses increased until the early 2000s before undergoing steep reductions. Mining declined until 2005, followed by a steady rise, and domestic use fluctuated after peaking around 2000.<br><br>
+  These patterns reflect shifting demands, regulatory changes, and evolving infrastructure across sectors. The data are sourced from the USGS National Water Use Information Program and Colorado Water Plan archives 
+  <a href="https://waterdata.usgs.gov/co/nwis/wu"
+     style="color: #003366; text-decoration: none; font-weight: bold;"
+     title="USGS Water Use Data for Colorado (1985–2015)"> [24] </a>.
+</blockquote>
+<br>
+<h5 style="font-weight: bold; text-align: center;">Reservoir Average Yearly Storage (1985–2022)</h5>
+<div style="display: flex; justify-content: center;">
+  <iframe src="Reservoir Average Yearly Storage 1985-2002.html" style="width:80%; height:900px; border:none;"></iframe>
+</div>
+<blockquote style="margin-top: 20px; padding: 16px; background-color: #f9f9f9; border-left: 4px solid #003366; font-size: 0.9em; width: 80%; margin-left: auto; margin-right: auto;">
+  <b>Figure Interpretation:</b><br><br>
+  This plot aggregates yearly average storage across nine major reservoirs in Colorado’s Upper Colorado River Basin from 1985 to 2002. Storage declined steadily from 245.7k acre-feet in 1985 to a sharp low of 171.4k in 2002, reflecting the onset of a severe drought. Recovery peaked in 2007 at 244.6k acre-feet, followed by fluctuating volumes and a general downward trend.<br><br>
+  These patterns highlight the vulnerability of reservoir systems to prolonged drought and underscore the importance of adaptive water management. Data are sourced from the USGS OWDI Drought Visualization and Colorado Water Science Center archives 
+  <a href="https://labs.waterdata.usgs.gov/visualizations/OWDI-drought/en/index.html"
+     style="color: #003366; text-decoration: none; font-weight: bold;"
+     title="USGS OWDI Drought Visualization"> [25] </a>.
+</blockquote>
+<br>
 
 <!-- Second Grid -->
 <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
@@ -389,6 +423,9 @@ function myFunction() {
   }
 }
 </script>
+
+</body>
+</html>
 
 </body>
 </html>
