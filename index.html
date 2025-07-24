@@ -320,7 +320,7 @@ Trend Slopes:</b> Farmland –0.286M acres/year, Irrigated –0.034M acres/year
 <br>
 <div class="w3-row-padding w3-padding-64 w3-container">
   <div class="w3-content">
-    <h5 class="w3-padding-32">
+  <h5 class="w3-padding-32">
     <div class="w3-row-padding w3-padding-64 w3-container"><div class="w3-content"><h1 style="margin:auto; text-align: center;">Further Hydrologic Analysis (State-Wide Analysis)</h1><br><br>
       <b>Harmonic Signal Decomposition:</b><br><br>
       To quantify periodicity in hydrologic and climatological data, harmonic analysis was applied using the truncated Fourier series form:<br><br>
@@ -375,7 +375,7 @@ Trend Slopes:</b> Farmland –0.286M acres/year, Irrigated –0.034M acres/year
 <br>
 <h3 style="font-weight: bold; text-align: center;">Additional Hydrologic Plots</h3>
 <br>
-<h5 style="font-weight: bold; text-align: center;">Colorado Water Use Trends Plot</h5>
+<h5 style="font-weight: bold; text-align: center;">Colorado Water Use Trends</h5>
 <div style="display: flex; justify-content: center;">
   <iframe src="water_uses_colorado.html" style="width:80%; height:900px; border:none;"></iframe>
 </div>
@@ -401,6 +401,59 @@ Trend Slopes:</b> Farmland –0.286M acres/year, Irrigated –0.034M acres/year
      title="USGS OWDI Drought Visualization"> [25] </a>.
 </blockquote>
 <br>
+<div class="w3-row-padding w3-padding-64 w3-container">
+<div class="w3-content">
+<h1 style="margin:auto; text-align: center;">Case Studies </h1>
+    <h5 class="w3-padding-32">
+          <b>Pearson Correlation Coefficient Analysis:</b><br><br>
+          To assess linear relationships between hydrologic variables, the Pearson correlation coefficient was computed using:<br><br>
+          <code>r = Σ[(xᵢ - x̄)(yᵢ - ȳ)] / √[Σ(xᵢ - x̄)² * Σ(yᵢ - ȳ)²]</code><br><br>
+          Where:
+          <ul>
+            <li><b>xᵢ</b> and <b>yᵢ</b> are paired observations (e.g., SWE, streamflow, population, irrigated agriculture)</li>
+            <li><b>x̄</b> and <b>ȳ</b> are the sample means of each variable</li>
+            <li><b>r</b> ranges from −1 (perfect negative) to +1 (perfect positive correlation)</li>
+          </ul>
+          Correlation analysis was applied to both raw and lagged datasets to capture seasonal dependencies. A strong positive correlation (~0.8–0.9) was observed between April 1st SWE and May–July streamflow across mountain-fed basins, confirming snowpack as a primary driver of runoff timing and volume.<br><br>
+          These results support the use of SWE as a predictive feature in streamflow modeling and water supply forecasting. For further background on Pearson correlation in hydrologic contexts, see:
+          <a href="https://doi.org/10.1007/s12665-018-7469-4"
+             style="color: #003366; text-decoration: none; font-weight: bold;"
+             title="Haas, J.C., Switanek, M., & Birk, S. (2018). Analysis of hydrological data with correlation matrices. Environmental Earth Sciences, 77(310)."> [26] </a>
+          and
+          <a href="https://doi.org/10.3390/earth3030059"
+             style="color: #003366; text-decoration: none; font-weight: bold;"
+             title="Koskinas, A. et al. (2022). Estimating the Statistical Significance of Cross–Correlations between Hydroclimatic Processes. Earth, 3(3), 1027–1041."> [27] </a>.
+    </h5>
+  </div>
+</div>
+<h5 style="font-weight: bold; text-align: center;">Logan County Pearson Correlation Table (1985–2022)</h5>
+<div style="display: flex; justify-content: center;">
+  <iframe src="Logan_table.html" style="width:80%; height:900px; border:none;"></iframe>
+</div>
+<blockquote style="margin-top: 20px; padding: 16px; background-color: #f9f9f9; border-left: 4px solid #003366; font-size: 0.9em; width: 80%; margin-left: auto; margin-right: auto;">
+  <b>Figure Interpretation:</b><br><br>
+  This table summarizes Pearson correlation coefficients between key hydrologic and demographic variables in Logan County, Colorado. The correlation between population growth and irrigated acreage is weakly positive (r = 0.096), indicating minimal linear dependence. More notably, population is negatively correlated with South Platte River discharge (r = −0.240), while irrigated acreage also shows a weak inverse relationship with discharge (r = −0.181).<br><br>
+  These patterns suggest potential competition between human and agricultural water demand and natural streamflow, particularly under constrained supply conditions. Similar trends have been documented in northeastern Colorado, where groundwater levels and river discharge have shown statistically significant correlations with irrigation practices and administrative water restrictions. For regional context and supporting analysis, see:
+  <a href="https://www.usgs.gov/index.php/centers/colorado-water-science-center/science/south-platte-groundwater-analysis"
+     style="color: #003366; text-decoration: none; font-weight: bold;"
+     title="USGS South Platte Groundwater Analysis (2013)"> [28] </a>.
+</blockquote>
+<br>
+<h5 style="font-weight: bold; text-align: center;">Douglas County Pearson Correlation Table (1985–2022)</h5>
+<div style="display: flex; justify-content: center;">
+  <iframe src="Douglas_table.html" style="width:80%; height:900px; border:none;"></iframe>
+</div>
+<blockquote style="margin-top: 20px; padding: 16px; background-color: #f9f9f9; border-left: 4px solid #003366; font-size: 0.9em; width: 80%; margin-left: auto; margin-right: auto;">
+  <b>Figure Interpretation:</b><br><br>
+  This table presents Pearson correlation coefficients between hydrologic and demographic variables in Douglas County, Colorado. A strong negative correlation (r = −0.851) exists between population growth and irrigated agriculture acreage, suggesting that urban expansion may be displacing agricultural land. Population also shows a moderate inverse relationship with South Platte River discharge (r = −0.371), while irrigated acreage is moderately positively correlated with discharge (r = 0.608), indicating that agricultural water use may track with surface water availability.<br><br>
+  These relationships reflect broader land use and water allocation dynamics in Douglas County, where rapid development has altered traditional irrigation patterns and streamflow behavior. For supporting regional analysis and groundwater context, see:
+  <a href="https://coloradogeologicalsurvey.org/publications/geology-groundwater-resources-douglas-colorado/"
+     style="color: #003366; text-decoration: none; font-weight: bold;"
+     title="Barkmann et al. (2015). Geology and Groundwater Resources of Douglas County, Colorado. Colorado Geological Survey."> [29] </a>.
+</blockquote>
+
+
+
 
 <!-- Second Grid -->
 <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
