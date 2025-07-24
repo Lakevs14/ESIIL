@@ -244,6 +244,65 @@ title="SpringerLink. (2017). Regression Analysis. In: Quantitative Methods for D
   This visual compares annual streamflow data across Colorado between 1980–2001 and 2002–2024 using scaled point symbology. Each point represents a streamgage station, sized proportionally to its average discharge and color-coded from light yellow to dark green—where lighter tones indicate lower flow rates and darker tones reflect higher values.<br><br>
   The earlier time frame (1980–2001) exhibits a more widespread presence of larger, dark-green points, denoting robust streamflow across much of the state. In contrast, the 2002–2024 map displays noticeably smaller and lighter-colored points, indicating a decline in discharge magnitudes across numerous basins. This pattern reinforces trends observed through regression analyses and highlights reduced surface water availability during the more recent period, which may impact municipal supply, agriculture, and aquatic ecosystems.
 </blockquote>
+<div style="display: flex; justify-content: center; flex-direction: column; align-items: center;">
+  <h5 style="font-weight: bold; text-align: center;">Irrigated Acres Regression Plot</h5>
+  <iframe src="interactive_irrigated_acres_plot.html" style="width:80%; height:900px; border:none;"></iframe>
+</div>
+
+<blockquote style="margin-top: 20px; padding: 16px; background-color: #f9f9f9; border-left: 4px solid #003366; font-size: 0.9em;">
+  <b>Figure Interpretation:</b><br><br>
+  <b>
+Trend Slopes:</b> Farmland –0.286M acres/year, Irrigated –0.034M acres/year
+<br>
+<b>Intercepts:</b> Farmland 587.8M acres, Irrigated 71.4M acres
+
+  
+  <br><br>
+  This interactive visualization depicts the contraction of Colorado’s agricultural and irrigated land base between 1987 and 2022. In 1987, the state supported approximately 20 million acres of farmland, with 3.2 million acres under irrigation. By 2022, farmland had declined to 10 million acres, and irrigated acreage dropped to 2 million.
+  <br><br>
+  These reductions reflect long-term shifts in land use, water availability, and agricultural economics. The 37.5% decline in irrigated acreage signals increasing pressure on water-intensive farming practices, particularly in regions reliant on surface diversions and groundwater pumping. This trend has implications for crop selection, rural economies, and long-term water planning across the state.
+ <a href="https://coloradoencyclopedia.org/article/irrigation-colorado"
+   style="color: #003366; text-decoration: none; font-weight: bold;"
+   title="Colorado Encyclopedia. (2023). Irrigation in Colorado."> [15] </a>
+</blockquote>
+<h5 style="font-weight: bold; text-align: center;">Colorado Agriculture Map</h5>
+<div style="display: flex; justify-content: center;">
+  <iframe src="colorado_agriculture_map.html" style="width:60%; height:900px; border:none;"></iframe>
+</div>
+
+<blockquote style="margin-top: 20px; padding: 16px; background-color: #f9f9f9; border-left: 4px solid #003366; font-size: 0.9em;">
+  <b>Figure Interpretation:</b><br><br>
+  This choropleth map compares county-level irrigated acreage across Colorado between two time periods: 1982–1997 and 2002–2022. Each county is shaded according to its percentage of irrigated farmland, using a seven-class color ramp ranging from light to dark.
+  <br><br>
+  In the earlier period (1982–1997), many counties exhibit darker tones, indicating higher proportions of irrigated acreage. By contrast, the 2002–2022 layer reveals a marked shift toward lighter shades, reflecting a significant decline in irrigated land across much of the state. This visual pattern aligns with USDA census data showing statewide irrigated acreage falling from 3.2 million acres in 1987 to 2 million acres in 2022.
+  <br><br>
+  The reduction in irrigation intensity underscores growing constraints on agricultural water use, driven by climate variability, groundwater depletion, and evolving land management practices. These spatial trends have implications for crop viability, rural economies, and long-term water allocation strategies.
+  <a href="https://data.nass.usda.gov/Publications/AgCensus/2022/Full_Report/Volume_1,_Chapter_1_State_Level/Colorado/"
+     style="color: #003366; text-decoration: none; font-weight: bold;"
+     title="USDA Census of Agriculture. (2022). Colorado State-Level Data."> [16] </a>
+</blockquote>
+<div style="display: flex; justify-content: center; flex-direction: column; align-items: center;">
+  <h5 style="font-weight: bold; text-align: center;">Colorado Population Regression Plot</h5>
+  <iframe src="colorado_population_linear_regression.html" style="width:80%; height:900px; border:none;"></iframe>
+</div>
+
+<blockquote style="margin-top: 20px; padding: 16px; background-color: #f9f9f9; border-left: 4px solid #003366; font-size: 0.9em;">
+  <b>Figure Interpretation:</b><br><br>
+  <b>Trend Slope:</b> +0.070M people/year  
+  <br>
+  <br>
+  This regression visualization illustrates Colorado’s population growth trajectory between 1985 and 2023. The state’s population expanded from approximately 3.21 million in 1985 to 5.88 million in 2023, reflecting a net increase of 2.66 million residents over 38 years.
+  <br><br>
+  The linear trend slope of +0.070 million people per year indicates a steady annual growth rate, while the intercept of –134.3 million represents the theoretical baseline extrapolated from the regression model. This sustained upward trend underscores Colorado’s long-term demographic expansion, driven by economic opportunity, in-migration, and urban development.
+  <br><br>
+  These findings align with U.S. Census Bureau estimates and projections from the Colorado State Demography Office, which report consistent population increases across most counties and age groups over the past four decades.
+  <a href="https://demography.dola.colorado.gov/" 
+     style="color: #003366; text-decoration: none; font-weight: bold;" 
+     title="Colorado State Demography Office. (2024). Colorado Population Trends and Forecasts."> [17] </a>
+</blockquote>
+
+
+
 
 
 
@@ -297,4 +356,3 @@ function myFunction() {
 
 </body>
 </html>
-
