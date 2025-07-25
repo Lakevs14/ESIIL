@@ -24,18 +24,18 @@ body {
   <div class="w3-bar  w3-card w3-left-align w3-large">
     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large " href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     <a href="#" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-white">Link 1</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-white">Link 2</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-white">Link 3</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-white">Link 4</a>
+    <a href="#Data" class="w3-bar-item w3-button w3-padding-large w3-white">Data</a>
+    <a href="#Statewide" class="w3-bar-item w3-button w3-padding-large w3-white">Statewide</a>
+    <a href="#Hydrological" class="w3-bar-item w3-button w3-padding-large w3-white">Hydrologic Plots</a>
+    <a href="#Case" class="w3-bar-item w3-button w3-padding-large w3-white">Case Study</a>
   </div>
 
   <!-- Navbar on small screens -->
   <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large w3-hover-gray">
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 4</a>
+    <a href="#Data" class="w3-bar-item w3-button w3-padding-large">Data</a>
+    <a href="#Statewide" class="w3-bar-item w3-button w3-padding-large">Statewide</a>
+    <a href="#Hydrological" class="w3-bar-item w3-button w3-padding-large">Hydrologic Plots</a>
+    <a href="#Case" class="w3-bar-item w3-button w3-padding-large">Case Study</a>
   </div>
 </div>
 
@@ -85,12 +85,13 @@ body {
 
   These systemic changes reflect the convergence of climatic volatility, land use transformation, and constrained water infrastructure. Agricultural systems have undergone especially sharp contractions in water use, driven by reduced access to surface flows and the retirement of irrigated lands. Meanwhile, residential demand has remained steady, placing mounting strain on existing water networks even as conservation efforts have stabilized household consumption. <br><br>
 
-  Amid these pressures, Colorado’s water systems face an inflection point—one that demands coordinated monitoring, strategic adaptation, and long-range planning. This study integrates publicly available datasets to trace hydrological trends across sectors, identify the underlying climatic and socio-demographic drivers, and clarify the implications for statewide resource management.
+  Amid these pressures, Colorado’s water systems face an inflection point—one that demands coordinated monitoring, strategic adaptation, and long-range planning. This study integrates publicly available datasets to trace hydrological trends across sectors, identify the underlying climatic and socio-demographic drivers, and clarify the implications for statewide resource management. 
 </h5>
-
-
   </div>
 </div>
+
+<p id="Data"></p>
+
 
 <div class="w3-row-padding w3-padding-64 w3-container">
   <div class="w3-content">
@@ -195,6 +196,7 @@ All datasets were imported into Colab using <code>pandas</code> and <code>geopan
 </h5>
   </div>
 </div>
+<p id="Statewide"></p>
 
 <div class="w3-row-padding w3-padding-64 w3-container"><div class="w3-content"><h1 style="margin:auto; text-align: center;">Methodologies And Figures With Maps (State-Wide Analysis)</h1><h5 class="w3-padding-32"><b>Linear Regression Modeling:</b><br><br>To assess directional trends over time, a linear regression model was applied to sequential data using the general form:<br><br>
 <code>y = β₀ + β₁ × x + ε</code><br><br>
@@ -366,14 +368,14 @@ Trend Slopes:</b> Farmland –0.286M acres/year, Irrigated –0.034M acres/year
 <blockquote style="margin-top: 20px; padding: 16px; background-color: #f9f9f9; border-left: 4px solid #003366; font-size: 0.9em; width: 80%; margin-left: auto; margin-right: auto;">
   <b>Figure Interpretation:</b><br><br>
   This harmonic decomposition of stream discharge reveals seasonal shifts that closely mirror those observed in SWE patterns. Given the strong positive correlation (~0.8) between SWE and discharge across Colorado’s mountain-fed basins, the attenuation of harmonic amplitudes post-2001 reflects a synchronized decline in both snowpack accumulation and spring runoff volumes.<br><br>
-  First-order harmonics—representing annual discharge cycles—show reduced amplitude and delayed phase timing in the 2002–2024 block, consistent with later snowmelt onset and diminished peak flows. Higher-order harmonics also weaken, indicating less intra-seasonal variability and a smoothing of runoff pulses. These changes parallel SWE trends, where mean values dropped from 6.04 inches to 5.33 inches over the same periods, reinforcing the hydrologic coupling between snowpack and discharge.<br><br>
+  First-order harmonics—representing annual discharge cycles—show reduced amplitude and delayed phase timing in the 2002–2024 block, consistent with later snowmelt onset and diminished peak flows. Higher-order harmonics also weaken, indicating less intra-seasonal variability and a smoothing of runoff pulses. These changes parallel SWE trends, where mean values dropped from 6.04 inches to 5.33 inches over the same periods, reinforcing the hydrologic coupling between snowpack and discharge.<br><br><p id="Hydrological"></p>
   The harmonic alignment between SWE and discharge underscores the sensitivity of Colorado’s water systems to climatic shifts. Reduced snowpack amplitude and altered melt timing directly translate to lower and less predictable streamflow, complicating reservoir operations, ecological flow targets, and water rights forecasting 
   <a href="https://pubs.usgs.gov/wsp/1543/report.pdf"
      style="color: #003366; text-decoration: none; font-weight: bold;"
      title="Helsel, D.R. & Hirsch, R.M. (2002). Statistical Methods in Water Resources, USGS WSP-1543."> [23] </a>.
 </blockquote>
 <br>
-<h3 style="font-weight: bold; text-align: center;">Additional Hydrologic Plots</h3>
+<h3 style="font-weight: bold; text-align: center;">Additional Hydrologic Analysis</h3>
 <br>
 <h5 style="font-weight: bold; text-align: center;">Colorado Water Use Trends</h5>
 <div style="display: flex; justify-content: center;">
@@ -399,6 +401,7 @@ Trend Slopes:</b> Farmland –0.286M acres/year, Irrigated –0.034M acres/year
   <a href="https://labs.waterdata.usgs.gov/visualizations/OWDI-drought/en/index.html"
      style="color: #003366; text-decoration: none; font-weight: bold;"
      title="USGS OWDI Drought Visualization"> [25] </a>.
+     <p id="Case"></p>
 </blockquote>
 <br>
 <div class="w3-row-padding w3-padding-64 w3-container">
@@ -653,9 +656,6 @@ function myFunction() {
   }
 }
 </script>
-
-</body>
-</html>
 
 </body>
 </html>
