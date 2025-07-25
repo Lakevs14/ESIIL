@@ -466,13 +466,205 @@ Trend Slopes:</b> Farmland –0.286M acres/year, Irrigated –0.034M acres/year
      title="Williams et al. (2011). Assessment of surface-water quantity and quality, Eagle River watershed, Colorado, 1947–2007. USGS Scientific Investigations Report 2011–5075."> [30] </a>.
 </blockquote>
 <br>
-
-
-<!-- Second Grid -->
-<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+<div class="w3-row-padding w3-padding-64 w3-container">
   <div class="w3-content">
-    <div class="w3-third w3-center">
-    </div>
+    <h5 class="w3-padding-32">
+      <b>ANOVA (Analysis of Variance):</b><br><br>
+      To evaluate whether differences in hydrologic variables across multiple groups (e.g., time periods, counties, or land use types) are statistically significant, one-way ANOVA was applied using the general form:<br><br>
+      <code>F = MS<sub>between</sub> / MS<sub>within</sub></code><br><br>
+      Where:
+      <ul>
+        <li><b>MS<sub>between</sub></b> is the mean square between groups (variation due to group differences)</li>
+        <li><b>MS<sub>within</sub></b> is the mean square within groups (variation due to random error)</li>
+        <li><b>F</b> is the test statistic used to assess significance</li>
+      </ul>
+      ANOVA was used to compare SWE, streamflow, and irrigated acreage across pre-2000 and post-2000 periods. Significant F-values (p < 0.05) indicated that mean differences between time blocks were unlikely due to chance, supporting the hypothesis of climate-driven shifts in hydrologic behavior.<br><br>
+      This method is particularly useful for validating temporal changes in water resource metrics and identifying regions with statistically distinct trends. For further background on ANOVA applications in hydrology and environmental science, see:
+      <a href="https://doi.org/10.1016/j.jhydrol.2016.01.065"
+         style="color: #003366; text-decoration: none; font-weight: bold;"
+         title="Zhang et al. (2016). Detecting changes in streamflow using ANOVA and trend analysis. Journal of Hydrology, 535, 443–455."> [31] </a>.
+    </h5>
+  </div>
+</div>
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+    <h5 class="w3-padding-32">
+      <b>ANOVA Results: County-Level Irrigated Acres (Logan, Douglas, and Eagle Counties, 1982–2022)</b><br><br>
+      A one-way ANOVA was conducted to assess whether the yearly irrigated acreage differs significantly between Logan, Douglas, and Eagle counties across three time periods: 1985–2001, 2002–2022, and the full span of 1985–2022. The test compares the mean irrigated acreages while accounting for within-group variability.<br><br>
+
+      <table style="width:100%; border-collapse: collapse; text-align:left;">
+        <thead style="background-color:#003366; color:white;">
+          <tr>
+            <th style="padding: 12px;">Time Period</th>
+            <th style="padding: 12px;">Source</th>
+            <th style="padding: 12px;">Sum of Squares</th>
+            <th style="padding: 12px;">df</th>
+            <th style="padding: 12px;">F-statistic</th>
+            <th style="padding: 12px;">p-value</th>
+          </tr>
+        </thead>
+        <tbody style="background-color:#f0f8ff;">
+          <tr>
+            <td style="padding: 12px;">2002–2022</td>
+            <td style="padding: 12px;">C(COUNTY)</td>
+            <td style="padding: 12px;">18.718</td>
+            <td style="padding: 12px;">2</td>
+            <td style="padding: 12px;">75.745</td>
+            <td style="padding: 12px;">1.56×10⁻⁷</td>
+          </tr>
+          <tr>
+            <td style="padding: 12px;">2002–2022</td>
+            <td style="padding: 12px;">Residual</td>
+            <td style="padding: 12px;">1.483</td>
+            <td style="padding: 12px;">12</td>
+            <td style="padding: 12px;">—</td>
+            <td style="padding: 12px;">—</td>
+          </tr>
+          <tr>
+            <td style="padding: 12px;">1985–2001</td>
+            <td style="padding: 12px;">C(COUNTY)</td>
+            <td style="padding: 12px;">9.144</td>
+            <td style="padding: 12px;">2</td>
+            <td style="padding: 12px;">17.307</td>
+            <td style="padding: 12px;">0.0032</td>
+          </tr>
+          <tr>
+            <td style="padding: 12px;">1985–2001</td>
+            <td style="padding: 12px;">Residual</td>
+            <td style="padding: 12px;">1.585</td>
+            <td style="padding: 12px;">6</td>
+            <td style="padding: 12px;">—</td>
+            <td style="padding: 12px;">—</td>
+          </tr>
+          <tr>
+            <td style="padding: 12px;">1985–2022</td>
+            <td style="padding: 12px;">C(COUNTY)</td>
+            <td style="padding: 12px;">27.216</td>
+            <td style="padding: 12px;">2</td>
+            <td style="padding: 12px;">60.294</td>
+            <td style="padding: 12px;">1.98×10⁻⁹</td>
+          </tr>
+          <tr>
+            <td style="padding: 12px;">1985–2022</td>
+            <td style="padding: 12px;">Residual</td>
+            <td style="padding: 12px;">4.740</td>
+            <td style="padding: 12px;">21</td>
+            <td style="padding: 12px;">—</td>
+            <td style="padding: 12px;">—</td>
+          </tr>
+        </tbody>
+      </table><br><br>
+
+      <b>Figure Interpretation:</b><br>
+      <div style="border-left: 5px solid #003366; padding-left: 15px; font-style: italic;">
+        These ANOVA results confirm substantial inter-county variation in irrigated acreage over time. The extremely high F-statistics (60–75) paired with very low p-values (10⁻⁷ to 10⁻⁹) underscore the statistical significance of the observed differences in agricultural land use among Logan, Douglas, and Eagle counties. Notably, the post-2002 block shows heightened differentiation, likely reflecting land use policy shifts, water availability changes, or county-level adaptation strategies.<br><br>
+        For scientific observers, this separation suggests that county identity is a strong explanatory factor in irrigation behavior, validating the use of county-level covariates in predictive models. From a land management perspective, results highlight the importance of tailored agricultural policies that respond to regional patterns rather than applying uniform assumptions across the state.
+      </div><br><br>
+
+      <b>Relevant Literature:</b><br>
+      For further context on irrigated agriculture dynamics in the Colorado River Basin and the influence of climate and socioeconomic factors, see:<br>
+      <a href="https://doi.org/10.3390/rs13091659"
+         style="color: #003366; text-decoration: none; font-weight: bold;"
+         title="Norton et al. (2021). Climate and Socioeconomic Factors Drive Irrigated Agriculture Dynamics in the Lower Colorado River Basin. Remote Sensing, 13(9), 1659.">
+         Norton et al. (2021) – Remote Sensing, 13(9), 1659
+      </a>.
+    </h5>
+  </div>
+</div>
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+    <h5 class="w3-padding-32">
+      <b>ANOVA Results: County-Level Population Differences (Logan, Douglas, and Eagle Counties, 1985–2022)</b><br><br>
+      A one-way ANOVA was performed to evaluate whether annual population counts differ significantly between Logan, Douglas, and Eagle counties across three time periods: 1985–2001, 2002–2022, and the full span of 1985–2022. The analysis compares inter-county mean differences while accounting for within-group variance.<br><br>
+
+      <table style="width:100%; border-collapse: collapse; text-align:left;">
+        <thead style="background-color:#003366; color:white;">
+          <tr>
+            <th style="padding: 12px;">Time Period</th>
+            <th style="padding: 12px;">Source</th>
+            <th style="padding: 12px;">Sum of Squares</th>
+            <th style="padding: 12px;">df</th>
+            <th style="padding: 12px;">Mean Square</th>
+            <th style="padding: 12px;">F-statistic</th>
+            <th style="padding: 12px;">p-value</th>
+          </tr>
+        </thead>
+        <tbody style="background-color:#f0f8ff;">
+          <tr>
+            <td style="padding: 12px;">1985–2001</td>
+            <td style="padding: 12px;">C(COUNTY)</td>
+            <td style="padding: 12px;">6.24×10¹⁰</td>
+            <td style="padding: 12px;">2</td>
+            <td style="padding: 12px;">3.12×10¹⁰</td>
+            <td style="padding: 12px;">36.40</td>
+            <td style="padding: 12px;">2.40×10⁻¹⁰</td>
+          </tr>
+          <tr>
+            <td style="padding: 12px;">1985–2001</td>
+            <td style="padding: 12px;">Residual</td>
+            <td style="padding: 12px;">4.12×10¹⁰</td>
+            <td style="padding: 12px;">48</td>
+            <td style="padding: 12px;">8.58×10⁸</td>
+            <td style="padding: 12px;">—</td>
+            <td style="padding: 12px;">—</td>
+          </tr>
+          <tr>
+            <td style="padding: 12px;">2002–2022</td>
+            <td style="padding: 12px;">C(COUNTY)</td>
+            <td style="padding: 12px;">9.73×10¹¹</td>
+            <td style="padding: 12px;">2</td>
+            <td style="padding: 12px;">4.87×10¹¹</td>
+            <td style="padding: 12px;">614.42</td>
+            <td style="padding: 12px;">1.09×10⁻⁴⁰</td>
+          </tr>
+          <tr>
+            <td style="padding: 12px;">2002–2022</td>
+            <td style="padding: 12px;">Residual</td>
+            <td style="padding: 12px;">4.75×10¹⁰</td>
+            <td style="padding: 12px;">60</td>
+            <td style="padding: 12px;">7.92×10⁸</td>
+            <td style="padding: 12px;">—</td>
+            <td style="padding: 12px;">—</td>
+          </tr>
+          <tr>
+            <td style="padding: 12px;">1985–2022</td>
+            <td style="padding: 12px;">C(COUNTY)</td>
+            <td style="padding: 12px;">8.11×10¹¹</td>
+            <td style="padding: 12px;">2</td>
+            <td style="padding: 12px;">4.05×10¹¹</td>
+            <td style="padding: 12px;">94.69</td>
+            <td style="padding: 12px;">1.01×10⁻²⁴</td>
+          </tr>
+          <tr>
+            <td style="padding: 12px;">1985–2022</td>
+            <td style="padding: 12px;">Residual</td>
+            <td style="padding: 12px;">4.75×10¹¹</td>
+            <td style="padding: 12px;">111</td>
+            <td style="padding: 12px;">4.28×10⁹</td>
+            <td style="padding: 12px;">—</td>
+            <td style="padding: 12px;">—</td>
+          </tr>
+        </tbody>
+      </table><br><br>
+
+      <b>Figure Interpretation:</b><br>
+      <div style="border-left: 5px solid #003366; padding-left: 15px; font-style: italic;">
+        ANOVA results reveal statistically significant differences in population trajectories among Logan, Douglas, and Eagle counties. The exceptionally high F-statistics—particularly in the 2002–2022 block (F ≈ 614)—and near-zero p-values confirm that county-level population means are not equal. These findings suggest that demographic growth patterns are strongly county-dependent, likely driven by localized economic development, housing availability, and migration trends.<br><br>
+        For scientific audiences, the magnitude of between-group variance relative to residual error supports the inclusion of county-level fixed effects in population modeling. For planners and policymakers, these results underscore the need for differentiated infrastructure and resource allocation strategies that reflect spatial heterogeneity in population dynamics.
+      </div><br><br>
+
+      <b>Relevant Literature:</b><br>
+      For further context on population modeling and spatial demographic analysis in Colorado, see:<br>
+      <a href="https://doi.org/10.1016/j.jtrangeo.2021.103083"
+         style="color: #003366; text-decoration: none; font-weight: bold;"
+         title="Zhou et al. (2021). Modeling population growth and migration patterns in Colorado using spatial econometrics. Journal of Transport Geography, 93, 103083.">
+         Zhou et al. (2021) – Journal of Transport Geography, 93, 103083
+      </a>.
+    </h5>
+  </div>
+</div>
+
+
    
 <!-- Footer -->
 <footer class="w3-container w3-padding-64 w3-center w3-opacity">  
