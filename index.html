@@ -321,7 +321,7 @@ Trend Slopes:</b> Farmland –0.286M acres/year, Irrigated –0.034M acres/year
   <b>Figure 8 Interpretation:</b><br><br>
   These choropleth maps illustrates county-level and station level changes across Colorado from pre and post 2000 time periods. Visualized layers include Total Population, Irrigated Agriculture, Streamflow Discharge, and Snow Water Equivalent (SWE), each shaded using a seven-class color ramp.
   <br><br>
-  Streamflow and irrigated acreage show widespread declines, consistent with diminished snowpack and hydrologic stress <a href="https://cwcb.colorado.gov/"> [18] </a> <a href="https://data.nass.usda.gov/Publications/AgCensus/2022/Full_Report/Volume_1,_Chapter_1_State_Level/Colorado/"> [19] </a>. SWE trends are predominantly negative, while population growth is concentrated in urban counties <a href="https://demography.dola.colorado.gov/population/"> [20] </a>.
+  Streamflow and irrigated acreage show widespread declines, consistent with diminished snowpack and hydrologic stress <a href="https://cwcb.colorado.gov/"> [18] </a> <a href="https://data.nass.usda.gov/Publications/AgCensus/2022/Full_Report/Volume_1,_Chapter_1_State_Level/Colorado/"> [16] </a>. SWE trends are predominantly negative, while population growth is concentrated in urban counties.
   <br><br>
   These spatial shifts reflect evolving pressures on Colorado’s water and land systems and provide a foundation for integrated analysis and planning across sectors.
 </blockquote>
@@ -343,13 +343,9 @@ Trend Slopes:</b> Farmland –0.286M acres/year, Irrigated –0.034M acres/year
       </ul>
       Harmonic plots were built using <code>numpy.fft</code> and <code>scipy.signal</code> routines in Google Colab. These decompositions revealed shifts in seasonal amplitude, phase timing, and dominant frequencies associated with snowmelt and runoff variability. Peaks in the first harmonic represent annual cycles, while attenuation in higher-order harmonics reflects reduced intra-seasonal variability.<br><br>
       For further background on harmonic filtering in geophysical series, see: 
-      <a href="https://pubs.usgs.gov/wsp/1543/report.pdf"
-         style="color: #003366; text-decoration: none; font-weight: bold;"
-         title="Helsel, D.R. & Hirsch, R.M. (2002). Statistical Methods in Water Resources, USGS WSP-1543."> [20] </a>
-      and 
-      <a href="https://doi.org/10.1007/s10584-010-9878-5"
-         style="color: #003366; text-decoration: none; font-weight: bold;"
-         title="Robeson, S.M. (2010). Frequency changes in climate time series. Climatic Change 102(3–4): 425–438."> [21] </a>.
+     <a href="https://doi.org/10.1007/s00382-006-0152-6"
+   style="color: #003366; text-decoration: none; font-weight: bold;"
+   title="Wang, J., & Ding, Y. (2006). Temporal and spatial characteristics of harmonic components in temperature and precipitation series in China. Climate Dynamics, 27(6), 739–758.">[19]</a>
     </h5>
   </div>
 </div>
