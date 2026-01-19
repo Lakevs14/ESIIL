@@ -15,6 +15,22 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 
 body {
 }
+
+ /* Keep the box from overflowing horizontally */
+  h1.responsive-title {
+    max-width: 90%;
+    box-sizing: border-box;
+    word-wrap: break-word;
+  }
+
+  /* Adjust padding + font size on small screens */
+  @media (max-width: 600px) {
+    h1.responsive-title {
+      font-size: 32px !important;   /* override w3-jumbo */
+      padding: 16px !important;
+    }
+  }
+
 </style>
 </head>
 <body>
@@ -22,21 +38,21 @@ body {
 <!-- Navbar -->
 <div class="w3-top">
   <div class="w3-bar  w3-card w3-left-align w3-large">
-    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large " href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     <a href="#" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
-    <a href="#Data" class="w3-bar-item w3-button w3-padding-large w3-white">Data</a>
-    <a href="#Statewide" class="w3-bar-item w3-button w3-padding-large w3-white">Statewide</a>
-    <a href="#Hydrological" class="w3-bar-item w3-button w3-padding-large w3-white">Hydrologic Plots</a>
-    <a href="#Case" class="w3-bar-item w3-button w3-padding-large w3-white">Case Study</a>
-    <a href="#Conclusion" class="w3-bar-item w3-button w3-padding-large w3-white">Conclusion</a>
-    <a href="#References" class="w3-bar-item w3-button w3-padding-large w3-white">References</a>
+    <a href="#Data" class="w3-bar-item w3-button w3-padding-large w3-white w3-hide-small">Data</a>
+    <a href="#Statewide" class="w3-bar-item w3-button w3-padding-large w3-white w3-hide-small">Statewide</a>
+    <a href="#Hydrological" class="w3-bar-item w3-button w3-padding-large w3-white w3-hide-small">Hydrologic Plots</a>
+    <a href="#Case" class="w3-bar-item w3-button w3-padding-large w3-white w3-hide-small">Case Study</a>
+    <a href="#Conclusion" class="w3-bar-item w3-button w3-padding-large w3-white w3-hide-small">Conclusion</a>
+    <a href="#References" class="w3-bar-item w3-button w3-padding-large w3-white w3-hide-small">References</a>
   </div>
 
   <!-- Navbar on small screens -->
   <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large w3-hover-gray">
     <a href="#Data" class="w3-bar-item w3-button w3-padding-large">Data</a>
     <a href="#Statewide" class="w3-bar-item w3-button w3-padding-large">Statewide</a>
-    <a href="#Hydrological" class="w3-bar-item w3-button w3-padding-large">Hydrologic Plots</a>
+    <a href="#Hydrological" class="w3-bar-item w3-button w3-padding-large ">Hydrologic Plots</a>
     <a href="#Case" class="w3-bar-item w3-button w3-padding-large">Case Study</a>
     <a href="#Conclusion" class="w3-bar-item w3-button w3-padding-large">Conclusion</a>
     <a href="#References" class="w3-bar-item w3-button w3-padding-large">References</a>
@@ -44,9 +60,9 @@ body {
 </div>
 
 <!-- Header -->
-<div style="background-image: url('esiilpic.jpg'); background-size: cover; background-position: center; background-attachment: fixed;">
+<div style="background-image: url('esiilpic.jpg'); background-size: cover; background-position: center; background-attachment: fixed; height: 700px;">
   <header class="w3-container w3-center" style="padding:128px 16px;">
-    <h1 class="w3-margin w3-jumbo w3-dark-grey" style="color: white !important; border-radius: 10px; background-color: rgba(0,0,0,0.6); display: inline-block; padding: 24px;">
+    <h1 class="w3-margin w3-jumbo w3-dark-grey responsive-title" style="color: white !important; border-radius: 10px; background-color: rgba(0,0,0,0.6); display: inline-block; padding: 24px;">
       Spatiotemporal Trends in Colorado’s Hydrologic Systems
     </h1>
   </header>
@@ -832,4 +848,3 @@ function myFunction() {
 
 </body>
 </html>
-
